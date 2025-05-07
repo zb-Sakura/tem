@@ -1,0 +1,78 @@
+.front-notice {
+    display: flex;
+    align-items: center;
+}
+
+.front-header {
+    display: flex;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #eee;
+}
+
+.front-header-left {
+    width: 350px;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.front-header-left img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.front-header-left .title {
+    color: #333;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.front-header-center {
+    flex: 1;
+}
+
+.front-header-right {
+    padding-right: 20px;
+}
+
+.main-content {
+    width: 80%;
+    margin: 5px auto;
+}
+.main-body {
+    min-height: calc(100vh - 100px);
+}
+:deep(.title) {
+    font-size: 18px;
+    color: #333;
+    text-align: justify;
+}
+:deep(.title:hover) {
+    color: #189500;
+    text-decoration: underline;
+}
+:deep(.content) {
+    line-height: 24px;
+}
+:deep(.content img) {
+    width: 100%;
+}
+/*Element-Plus样式覆盖*/
+.el-menu--horizontal {
+    border: none !important;
+    height: 59px;
+}
+.el-menu-item.is-active {
+    background-color: #189500 !important;
+    color: white !important;
+}
+.el-menu-item:hover {
+    border-bottom: 2px solid #189500;
+}
+.el-tooltip__trigger {
+    outline: none;
+}
