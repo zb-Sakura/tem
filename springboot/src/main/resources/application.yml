@@ -1,0 +1,27 @@
+server:
+  port: 9090
+
+# 数据库配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: xxxxxx
+    url: jdbc:mysql://localhost:3306/xm_travel?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2b8&allowPublicKeyRetrieval=true
+
+# 配置mybatis实体和xml映射
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapper/*.xml
+
+fileBaseUrl: http://localhost:${server.port}
+
+# appId, appPrivateKey, alipayPublicKey 是来自 https://open.alipay.com/develop/sandbox/ 支付宝沙箱的配置
+# notifyUrl中 [http://htx472.natappfree.cc] 为内网穿透后外网访问域名，需自行更改, 内网穿透可使用 https://natapp.cn/
+alipay:
+  appId: xxx
+  appPrivateKey: xxx
+  alipayPublicKey: xxx
+  notifyUrl: http://htx472.natappfree.cc/alipay/notify
